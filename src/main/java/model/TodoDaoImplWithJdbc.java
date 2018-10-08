@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class TodoDaoImplWithJdbc implements TodoDao {
 
-    private static final String DATABASE = "jdbc:postgresql://localhost:5432/todolist";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "postgres";
+    private static final String DATABASE = System.getenv("DATABASE");
+    private static final String DB_USER = System.getenv("DB_USER");
+    private static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
 
     @Override
     public void add(Todo todo) {
